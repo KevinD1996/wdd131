@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    /* active CSS Grid */
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-rows: auto auto 1fr auto;
+    /*  High of each zone */
+    min-height: 100vh;
+    /* fill whole the screem */
+    margin: 0;
+    font-family: Arial, Hevetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    grid-area: header;
+    background-color: #0077cc;
+    color: white;
+    padding: 1em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    /* center the elements */
+    gap: 1.5rem;
+    /* space between buonds */
+    list-style: none;
+    /* dots of the list */
+    margin-top: 0.5em;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+main {
+    grid-area: main;
+    padding: 2em;
+    background-color: white;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+
+}
